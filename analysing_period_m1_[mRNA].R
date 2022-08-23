@@ -10,8 +10,7 @@ period_m1_mRNA_fold_change = data.frame(time = fig_6_mRNA_df$x,
                                         period8 = fig_6_mRNA_df$fold_change,
                                         period40 = fig_9_mRNA_df$fold_change,
                                         period200 = fig_12_mRNA_df$fold_change)
-tail(period_m1_mRNA,1)
-tail(period_m1_mRNA_fold_change,1)
+
 fig_period_m1_mRNA_conc = ggplot(data=period_m1_mRNA, mapping = aes(x=time)) +
   geom_line(mapping = aes(y=period8, color="8 s")) +
   geom_line(mapping = aes(y=period40, color="40 s")) +
