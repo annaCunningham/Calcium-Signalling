@@ -1,7 +1,7 @@
 # Examining changing period. 
 # Period duration of 8 seconds and a total of 50 oscillations. 
 
-## CREATING PIECEWISE OSCILLATION 
+## CREATING PIECEWISE OSCILLATION.
 oscillation_number = 50  
 period = 8                
 time = c(0:(period-1))
@@ -54,7 +54,7 @@ figure_8 = graphing_function(fig_8_df, fig_8_df$x, fig_8_df$X_Values, "Target Tr
 figure_8
 
 
-## CALCULATING CHANGES IN [mRNA]
+## CALCULATING CHANGES IN [mRNA].
 fig_6_mRNA_df = fig_8_df
 fig_6_mRNA_df$X_concentration = (fig_6_mRNA_df$X_Values*1) #assume total (x) concentration is 1
 #add mRNA concentration column 
