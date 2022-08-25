@@ -14,19 +14,15 @@ mRNA_concentration_adj=0.1
 X_conc_value_temp = analysing_vmax$X_concentration
 
 analysing_vmax$mRNA_concentration = mRNA_concentration_function(
-  k_base = k_base_adj, v_max = v_max_adj,
-  X_conc_value = X_conc_value_temp,
-  binding_affinity = binding_affinity_adj,
-  k_decay = k_decay_adj,
-  mRNA_concentration = mRNA_concentration_adj
+  k_base_adj, v_max_adj, X_conc_value_temp, binding_affinity_adj, k_decay_adj, mRNA_concentration_adj
   )
 
 X_conc_value_av = SS_mRNA_concentration(average_calcium)
-SS_mRNA_temp  = mRNA_concentration_function(k_base = k_base_adj,v_max = v_max_adj,
-                                            X_conc_value = X_conc_value_av, 
-                                            binding_affinity = binding_affinity_adj,
-                                            k_decay = k_decay_adj, 
-                                            mRNA_concentration = mRNA_concentration_adj)
+SS_mRNA_temp  = mRNA_concentration_function(k_base_adj,v_max_adj,
+                                            X_conc_value_av, 
+                                            binding_affinity_adj,
+                                            k_decay_adj, 
+                                            mRNA_concentration_adj)
 analysing_vmax$fold_change = analysing_vmax$X_concentration/SS_mRNA_temp
 
 # ANALYSING KDECAY 
@@ -39,19 +35,15 @@ k_decay_adj=0.05
 mRNA_concentration_adj=0.1
 
 analysing_kdecay$mRNA_concentration = mRNA_concentration_function(
-  k_base = k_base_adj, v_max = v_max_adj,
-  X_conc_value = X_conc_value_temp,
-  binding_affinity = binding_affinity_adj,
-  k_decay = k_decay_adj,
-  mRNA_concentration = mRNA_concentration_adj
+  k_base_adj, v_max_adj, X_conc_value_temp, binding_affinity_adj, k_decay_adj, mRNA_concentration_adj
 )
 
 X_conc_value_av = SS_mRNA_concentration(average_calcium)
-SS_mRNA_temp  = mRNA_concentration_function(k_base = k_base_adj,v_max = v_max_adj,
-                                            X_conc_value = X_conc_value_av, 
-                                            binding_affinity = binding_affinity_adj,
-                                            k_decay = k_decay_adj, 
-                                            mRNA_concentration = mRNA_concentration_adj)
+SS_mRNA_temp  = mRNA_concentration_function(k_base_adj,v_max_adj,
+                                            X_conc_value_av, 
+                                            binding_affinity_adj,
+                                            k_decay_adj, 
+                                            mRNA_concentration_adj)
 analysing_kdecay$fold_change = analysing_kdecay$X_concentration/SS_mRNA_temp
 
 # ANALYSING BINDING AFFINITY
@@ -64,19 +56,15 @@ k_decay_adj=0.1
 mRNA_concentration_adj=0.1
 
 analysing_binding_affinity$mRNA_concentration = mRNA_concentration_function(
-  k_base = k_base_adj, v_max = v_max_adj,
-  X_conc_value = X_conc_value_temp,
-  binding_affinity = binding_affinity_adj,
-  k_decay = k_decay_adj,
-  mRNA_concentration = mRNA_concentration_adj
+  k_base_adj, v_max_adj, X_conc_value_temp, binding_affinity_adj, k_decay_adj, mRNA_concentration_adj
 )
 
 X_conc_value_av = SS_mRNA_concentration(average_calcium)
-SS_mRNA_temp  = mRNA_concentration_function(k_base = k_base_adj,v_max = v_max_adj,
-                                            X_conc_value = X_conc_value_av, 
-                                            binding_affinity = binding_affinity_adj,
-                                            k_decay = k_decay_adj, 
-                                            mRNA_concentration = mRNA_concentration_adj)
+SS_mRNA_temp  = mRNA_concentration_function(k_base_adj,v_max_adj,
+                                            X_conc_value_av, 
+                                            binding_affinity_adj,
+                                            k_decay_adj, 
+                                            mRNA_concentration_adj)
 analysing_binding_affinity$fold_change = analysing_binding_affinity$X_concentration/SS_mRNA_temp
 
 # ANALYSING BASE TRANSCRIPTION RATE 
@@ -89,19 +77,15 @@ k_decay_adj=0.1
 mRNA_concentration_adj=0.1
 
 analysing_k_base$mRNA_concentration = mRNA_concentration_function(
-  k_base = k_base_adj, v_max = v_max_adj,
-  X_conc_value = X_conc_value_temp,
-  binding_affinity = binding_affinity_adj,
-  k_decay = k_decay_adj,
-  mRNA_concentration = mRNA_concentration_adj
+  k_base_adj, v_max_adj, X_conc_value_temp, binding_affinity_adj, k_decay_adj, mRNA_concentration_adj
 )
 
 X_conc_value_av = SS_mRNA_concentration(average_calcium)
-SS_mRNA_temp  = mRNA_concentration_function(k_base = k_base_adj,v_max = v_max_adj,
-                                            X_conc_value = X_conc_value_av, 
-                                            binding_affinity = binding_affinity_adj,
-                                            k_decay = k_decay_adj, 
-                                            mRNA_concentration = mRNA_concentration_adj)
+SS_mRNA_temp  = mRNA_concentration_function(k_base_adj, v_max_adj,
+                                            X_conc_value_av, 
+                                            binding_affinity_adj,
+                                            k_decay_adj, 
+                                            mRNA_concentration_adj)
 analysing_k_base$fold_change = analysing_k_base$X_concentration/SS_mRNA_temp
 
 
