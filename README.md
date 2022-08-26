@@ -14,5 +14,7 @@ Three calcium signatures are constructed for (1), (2) and (3); each signature ha
 Further parameters (4) are analysed by changing the values for parameter values directly involved in the mRNA transcription process. Changes in mRNA concentration and fold change to activity is similarly plotted. 
 
 Calcium signatures are created using an oscillation function, found in oscillation_function. 
+
 A similar format for graphs are maintained by a graphing function, found in graphing_function.
+
 Changes in CDPK and TF activity are calculated from ODE's, found in CDPK_and_TF_activity.
