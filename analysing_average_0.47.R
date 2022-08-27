@@ -44,6 +44,7 @@ end_t2=tail(fig_40_df$x, 1)
 start_t1=(end_t2-period)
 dataframe=fig_40_df$X_Values
 average_x = calculate_average_function(start_t1, end_t2, dataframe)
+fig_41_df = fig_40_df[-1,]
 
 # Plot changes in X activity.
 figure_41 = graphing_function(fig_41_df, fig_41_df$x, fig_41_df$X_Values, "Target Transcription Factor",
