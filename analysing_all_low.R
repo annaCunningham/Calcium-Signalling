@@ -50,7 +50,6 @@ figure_49 = graphing_function(fig_49_df, fig_49_df$x, fig_49_df$X_Values, "Targe
 figure_49
 
 ## CREATING PLOT FOR [mRNA]
-#fig 47 mRNA
 fig_47_mRNA_df = fig_49_df
 fig_47_mRNA_df$X_concentration = (fig_47_mRNA_df$X_Values *1) #assume total (x) concentration is 1
 #add mRNA concentration column 
