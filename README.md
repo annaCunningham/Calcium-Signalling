@@ -21,6 +21,15 @@ A similar format for graphs are maintained by a graphing function, found in grap
 
 Changes in CDPK and TF activity are calculated from ODE's, found in CDPK_and_TF_activity.
 
+Variable descriptions:
+oscillation number == total number of oscillations
+period == duration (in seconds) of one oscillation
+spike_width == time (seconds) for each peak.
+time == counts from 0 seconds to end of oscillation (seconds).
+max == maximum calcium concentration 
+min == minimum calcium concentration
+
+
 RUNNING INSTRUCTIONS:
 
 (1) Run all "function" files first. 
