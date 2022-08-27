@@ -11,10 +11,9 @@ min = 0.1
 fig_27_df = data.frame(x = c(0,c(1:(oscillation_number*period))), 
                        S =  c(min,oscillation_function(time, oscillation_number, period, spike_width, max, min)))
 # Plot piece-wise oscillation
-figure_27 = graphing_function(fig_27_df, fig_27_df$x, fig_27_df$S, "Calcium Oscillation", "Time (s)",expression(paste("[Ca"^"2+"*"]", mu, "M"))) +
-  geom_step(colour="black") + geom_hline(yintercept=mean(fig_27_df$S), color="gray0", 
-                                         linetype="dashed") +
-  annotate('text', x=(oscillation_number*(period)+50), y=(mean(fig_24_df$S)+0.03), label = "bar(S) ", parse=TRUE, size=4) 
+figure_27 = graphing_function(fig_27_df, fig_27_df$x, fig_27_df$S, "Calcium Oscillation", "Time (s)", expression(paste("[Ca"^"2+"*"]", mu, "M"))) +
+  geom_step(colour="black") + geom_hline(yintercept=mean(fig_27_df$S), color="gray0", linetype="dashed") +
+  annotate('text', x=(oscillation_number*(period)+50), y=(mean(fig_27_df$S)+0.03), label = "bar(S) ", parse=TRUE, size=4) 
 figure_27
 
 ## CREATING PLOT FOR Y ACTIVITY.
@@ -28,10 +27,10 @@ average_y = calculate_average_function(start_t1, end_t2, fig_28_df$Y_Values)
 figure_28 = graphing_function(fig_28_df, fig_28_df$x, fig_28_df$Y_Values, "Calcium-dependent kinase",
                               "Time (s)","CDPK") + geom_line(colour="blue4") + 
   geom_hline(yintercept=average_y ,color="gray0", linetype="dashed") +
-  annotate('text', x=50, y=(average_y+0.03), label="bar(CDPK) ", parse=TRUE, size=3.5)+
+  annotate('text', x=50, y=(average_y+0.03), label="bar(CDPK) ", parse=TRUE, size=3.5) +
   geom_segment(aes(x=0,y=1.05, xend = 850,yend = 1.05), colour = "black",
                arrow=arrow(length=unit(0.1, "cm"), ends="both")) +
-  annotate("text", x=500 , y=1.1, label="Transient", parse=TRUE, size=3.5)+
+  annotate("text", x=500 , y=1.1, label="Transient", parse=TRUE, size=3.5) +
   geom_segment(aes(x=850, y=1.05, xend=2000, yend=1.05), colour="black",
                arrow=arrow(length=unit(0.1, "cm"), ends="both")) +
   annotate("text", x=1500 , y=1.1, label="Periodic", parse=TRUE, size=3.5)
@@ -49,10 +48,10 @@ fig_29_df = fig_28_df[-1,]
 figure_29 = graphing_function(fig_29_df, fig_29_df$x, fig_29_df$X_Values, "Target Transcription Factor",
                               "Time (s)", "TF") + geom_path(colour="blue4") + 
   geom_hline(yintercept=average_x ,color="gray0", linetype="dashed") +
-  annotate('text', x=50, y=(average_x+0.01), label="bar(TF) ", parse=TRUE, size=3.5)+
+  annotate('text', x=50, y=(average_x+0.01), label="bar(TF) ", parse=TRUE, size=3.5) +
   geom_segment(aes(x=0, y=0.355, xend=850, yend=0.355), colour="black",
                arrow = arrow(length = unit(0.1, "cm"),ends = "both")) +
-  annotate("text", x=500 , y=0.365, label="Transient", parse=TRUE, size=3.3)+
+  annotate("text", x=500 , y=0.365, label="Transient", parse=TRUE, size=3.3) +
   geom_segment(aes(x=850, y=0.355, xend=2000, yend=0.355), colour="black",
                arrow=arrow(length=unit(0.1, "cm"), ends="both")) +
   annotate("text", x=1500 , y=0.365, label="Periodic", parse=TRUE, size=3.3)
@@ -66,6 +65,3 @@ X_conc_value_temp = fig_27_mRNA_df$X_concentration
 fig_27_mRNA_df$mRNA_concentration  = mRNA_concentration_function(X_conc_value = X_conc_value_temp)
 #calculating and plotting fold change 
 fig_27_mRNA_df$fold_change = fig_27_mRNA_df$mRNA_concentration/SS_mRNA_0.18
-
-
-
