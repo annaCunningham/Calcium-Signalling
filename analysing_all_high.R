@@ -40,6 +40,7 @@ end_t2=tail(fig_43_df$x, 1)
 start_t1=(end_t2-period)
 dataframe=fig_43_df$X_Values
 average_x = calculate_average_function(start_t1,end_t2, dataframe)
+fig_44_df = fig_43_df[-1,]
 
 # Plot changes in X activity.
 figure_44 = graphing_function(fig_44_df, fig_44_df$x, fig_44_df$X_Values, "Target Protein",
