@@ -39,6 +39,7 @@ end_t2=tail(fig_48_df$x, 1)
 start_t1=(end_t2-period)
 dataframe=fig_48_df$X_Values
 average_x = calculate_average_function(start_t1,end_t2, dataframe)
+fig_49_df = fig_48_df[-1,]
 
 # Plot changes in X activity.
 figure_49 = graphing_function(fig_49_df, fig_49_df$x, fig_49_df$X_Values, "Target Target Factor",
