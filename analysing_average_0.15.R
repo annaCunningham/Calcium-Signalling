@@ -65,6 +65,3 @@ X_conc_value_temp = fig_33_mRNA_df$X_concentration
 fig_33_mRNA_df$mRNA_concentration  = mRNA_concentration_function(X_conc_value = X_conc_value_temp)
 #calculating and plotting fold change 
 fig_33_mRNA_df$fold_change = fig_33_mRNA_df$mRNA_concentration/SS_mRNA_0.15
-
-
-
