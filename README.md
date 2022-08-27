@@ -1,5 +1,7 @@
 # Calcium-Signalling
 
+DESCRIPTION:
+
 An analysis of how information is encoded within the calcium signature.
 Analysis of:
 (1) amplitude,
@@ -18,3 +20,25 @@ Calcium signatures are created using an oscillation function, found in oscillati
 A similar format for graphs are maintained by a graphing function, found in graphing_function.
 
 Changes in CDPK and TF activity are calculated from ODE's, found in CDPK_and_TF_activity.
+
+RUNNING INSTRUCTIONS:
+
+(1) Run all "function" files first. 
+These include: graphing_function, oscillation_function, differential_equations_function,      mRNA_concentration_function.
+
+(2) Run steady_state_mRNA file. 
+This calculates [mRNA] from the average calcium concentration of different signatures. 
+
+(3) Run analysing_period_m1 files then plot results using analysing_period_m1_mRNA. 
+
+(4) Run analysing_period_m2 files then plot results using analysing_period_m2_mRNA. 
+
+(5) Run analysing_average files then plot results using analysing_average_mRNA. 
+
+(6) Run analysing_amplitude files then plot results using analysing_amplitude_mRNA. 
+
+(7) Run analysing_kinetics file then plot results using analysing_kinetics_mRNA. 
+
+(8) Run analysing_all files then plot results using analysing_all_mRNA. 
+
+(9) Run analysing_prolonged_signature and analysing_oscillatory_signature then plot results using analysing_signatures_mRNA. 
