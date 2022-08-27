@@ -47,8 +47,6 @@ figure_11 = graphing_function(fig_11_df, fig_11_df$x, fig_11_df$X_Values, "Targe
   annotate("text", x=200 , y=0.31, label="Transient", parse=TRUE, size=3.5)
 
 figure_11
-tail(fig_11_df,1)
-
 
 ## CALCULATING CHANGES IN [mRNA].
 fig_9_mRNA_df = fig_11_df
@@ -58,5 +56,3 @@ X_conc_value_temp = fig_9_mRNA_df$X_concentration
 fig_9_mRNA_df$mRNA_concentration = mRNA_concentration_function(X_conc_value=X_conc_value_temp)
 #calculating and plotting fold change 
 fig_9_mRNA_df$fold_change = fig_9_mRNA_df$mRNA_concentration/SS_mRNA_0.15
-
-
