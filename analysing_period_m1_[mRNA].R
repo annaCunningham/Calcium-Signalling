@@ -1,5 +1,4 @@
 # PLOTTING [mRNA] AND FOLD CHANGE FOR PERIOD METHOD 1.
-install.packages("gridExtra")
 library("gridExtra")
 period_m1_mRNA = data.frame(time = fig_6_mRNA_df$x,
                             period8 = fig_6_mRNA_df$mRNA_concentration,
@@ -30,4 +29,3 @@ fig_period_m1_mRNA_fold_change = ggplot(data=period_m1_mRNA_fold_change, mapping
         axis.title.y=element_text(size=9.5),legend.position = "top",legend.title = element_blank()) 
 
 grid.arrange(fig_period_m1_mRNA_conc, fig_period_m1_mRNA_fold_change, ncol=2)
-
