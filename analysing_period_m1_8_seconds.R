@@ -40,9 +40,7 @@ figure_7
 ## CREATING PLOT FOR CHANGES IN X ACTIVITY.
 fig_7_df$X_Values = as.numeric(unlist(x_activation_function(fig_7_df)))
 average_x = calculate_average_function(end_t2=tail(fig_7_df$x, 1),start_t1=(end_t2-period), dataframe=fig_7_df$X_Values)
-
-# Removing time at 0 seconds. 
-fig_8_df = fig_7_df[-1:2,]
+fig_8_df = fig_7_df[-1,]
 
 # Plot changes in x activity.
 figure_8 = graphing_function(fig_8_df, fig_8_df$x, fig_8_df$X_Values, "Target Transcription Factor",
