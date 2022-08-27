@@ -37,4 +37,3 @@ fig_kinetics_mRNA_fold_change = ggplot(data=kinetics_mRNA_fold_change, mapping =
         axis.title.y=element_text(size=9.5), legend.position = "top", legend.title = element_blank()) 
 
 grid.arrange(fig_kinetics_mRNA_conc, fig_kinetics_mRNA_fold_change, ncol=2)
-tail(kinetics_mRNA_fold_change)
